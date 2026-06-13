@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class StickGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите количество палочек (1 ≤ n ≤ 10^18): ");
+        long n = scanner.nextLong();
+        
+        // Кто выигрывает?
+        if (n % 5 == 0 || n % 5 == 2) {
+            System.out.println("Таня выигрывает (проигрышная позиция для первого)");
+        } else {
+            System.out.println("Саша выигрывает (выигрышная позиция для первого)");
+        }
+        
+        scanner.close();
+    }
+}
