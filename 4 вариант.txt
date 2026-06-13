@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ArithmeticSeries {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ввод трёх чисел
+        System.out.print("Введите начало ряда, шаг и количество шагов: ");
+        int start = scanner.nextInt();
+        int step = scanner.nextInt();
+        int count = scanner.nextInt();
+
+        // Вывод ряда чисел
+        for (int i = 0; i < count; i++) {
+            int current = start + i * step;
+            System.out.print(current);
+            if (i < count - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        scanner.close();
+    }
+}
